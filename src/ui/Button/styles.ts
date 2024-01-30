@@ -9,7 +9,7 @@ const ButtonVariants = {
     font-size: 1.5rem;
     padding: 0.75rem 3.25rem;
     &:hover {
-      box-shadow: 1px 1px 17px ${colors["tropical-indigo"]};
+      box-shadow: 1px 1px 30px ${colors["tropical-indigo"]};
     }
   `,
   primary: css`
@@ -48,7 +48,7 @@ export const Container = styled.button<ContainerTypes>`
   border-radius: 9999px;
   font-size: 1.25rem;
   padding: 0.5rem 3.25rem;
-  transition: 300ms;
+  transition: 400ms;
 
   &:focus-visible {
     outline: none;

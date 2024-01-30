@@ -8,6 +8,10 @@ export const IntroContainer = styled.div`
   margin: 0 2.25rem;
   max-width: 600px;
   min-height: calc(100vh - 2rem - 32px);
+
+  @media (min-width: 1024px) {
+    min-height: calc(100vh - 2rem - 40px);
+  }
 `;
 export const IntroTitle = styled.h2`
   font-size: 2.5rem;

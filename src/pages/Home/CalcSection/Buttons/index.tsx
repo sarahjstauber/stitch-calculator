@@ -5,10 +5,10 @@ import {
   ClearWrapperBig,
   ClearWrapperSmall,
 } from "./styles.ts";
-import {useHomeProvider} from "../../provider/useHomeProvider.ts";
+import { useHomeProvider } from "../../provider/useHomeProvider.ts";
 
 export const Buttons = () => {
-  const {onReset} = useHomeProvider();
+  const { onReset } = useHomeProvider();
 
   return (
     <Container>

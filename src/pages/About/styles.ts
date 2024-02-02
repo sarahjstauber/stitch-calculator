@@ -16,11 +16,11 @@ export const OuterContainer = styled.div`
 `;
 
 export const InnerContainer = styled.div`
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+`;
 
 export const Title = styled.h2`
   color: ${colors["federal-blue"]};

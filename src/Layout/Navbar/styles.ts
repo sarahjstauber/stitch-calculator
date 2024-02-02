@@ -16,10 +16,6 @@ export const Container = styled.nav`
   }
 `;
 
-const isCurrentPageStyles = css({
-  textDecoration: `${colors["tropical-indigo"]} underline 4px`,
-  textUnderlineOffset: "0.5rem",
-});
 const isDifferentPageStyles = css({
   "&:hover": {
     color: colors["tropical-indigo"],
@@ -32,16 +28,5 @@ export const Title = styled(Link)<{ $isCurrentPage: boolean }>`
 
   @media (min-width: 1024px) {
     font-size: 2.25rem;
-  }
-`;
-
-export const About = styled(Link)<{ $isCurrentPage: boolean }>`
-  font-size: 1.5rem;
-  transition: 300ms;
-  ${(props) =>
-    props.$isCurrentPage ? isCurrentPageStyles : isDifferentPageStyles};
-
-  @media (min-width: 1024px) {
-    font-size: 1.5rem;
   }
 `;

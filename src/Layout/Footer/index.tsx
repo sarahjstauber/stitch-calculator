@@ -1,8 +1,11 @@
 import { Container, Copyright } from "./styles.ts";
 
-export const Footer = ({ textColor }: { textColor: "light" | "dark" }) => {
+type FooterProps = {
+  textColor?: "light" | "dark";
+};
+export const Footer = ({ textColor = "dark" }: FooterProps) => {
   return (
-    <Container>
+    <Container id="footer">
       <Copyright
         className={textColor === "light" ? "text-white" : "text-dim-grey"}
       >

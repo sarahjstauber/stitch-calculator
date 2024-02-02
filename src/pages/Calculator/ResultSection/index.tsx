@@ -1,11 +1,11 @@
-import { useHomeProvider } from "../provider/useHomeProvider.ts";
+import { useCalculatorProvider } from "../provider/useCalculatorProvider.ts";
 import { Container, Description, Info, Result } from "./styles.ts";
 import { Button } from "../../../ui";
 import { STITCHES } from "../../../utils/types.ts";
 import { renderStitchDetails } from "../../../utils/renderStitches.ts";
 
 export const ResultSection = () => {
-  const { inputsState, onReset, outputState } = useHomeProvider();
+  const { inputsState, onReset, outputState } = useCalculatorProvider();
 
   if (!outputState.pattern) return null;
 

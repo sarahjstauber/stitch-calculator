@@ -1,6 +1,6 @@
 import { Dropdown, Input } from "../../../../ui";
 import { Container, Name, Title } from "./styles.ts";
-import { useHomeProvider } from "../../provider/useHomeProvider.ts";
+import { useCalculatorProvider } from "../../provider/useCalculatorProvider.ts";
 import type { InputsTypeT } from "../../provider/types.ts";
 import { TYPE_OPTIONS } from "./utils.ts";
 
@@ -10,7 +10,8 @@ type InputSectionProps = {
   title: string;
 };
 export const Inputs = ({ countName, typeName, title }: InputSectionProps) => {
-  const { onChangeInput, onChangeSelect, inputsState } = useHomeProvider();
+  const { onChangeInput, onChangeSelect, inputsState } =
+    useCalculatorProvider();
 
   return (
     <Container>

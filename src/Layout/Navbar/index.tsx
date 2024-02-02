@@ -1,18 +1,16 @@
-import { About, Container, Title } from "./styles.ts";
+import { Container, Title } from "./styles.ts";
 import { useLocation } from "react-router-dom";
+import { Menu } from "./Menu";
 
 export const Navbar = () => {
   const location = useLocation();
-  console.log(location);
 
   return (
-    <Container className="font-display">
+    <Container className="font-display" id="navbar">
       <Title $isCurrentPage={location.pathname === "/"} to="/">
         stitch calculator
       </Title>
-      <About $isCurrentPage={location.pathname === "/about"} to="about">
-        about
-      </About>
+      <Menu />
     </Container>
   );
 };

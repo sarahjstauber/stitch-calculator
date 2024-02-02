@@ -1,6 +1,6 @@
 import { CHANGES, STITCHES } from "./types.ts";
 import type { CHANGE_TYPES, STITCH_TYPES } from "./types.ts";
-import type { StateType } from "../pages/Home/provider/types.ts";
+import type { StateType } from "../pages/Calculator/provider/types.ts";
 import { renderStitchDetails, renderStitchPattern } from "./renderStitches.ts";
 
 // Euclidean algorithm for greatest common denominator

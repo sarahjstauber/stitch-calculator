@@ -16,17 +16,21 @@ export const initialState: StateType = {
   },
 };
 
-export const HomeContext = createContext<{
+export const CalculatorContext = createContext<{
   state: StateType;
   setState: Dispatch<SetStateAction<StateType>>;
 }>({ state: initialState, setState: () => undefined });
 
-export const HomeProvider = ({ children }: { children: ReactElement }) => {
+export const CalculatorProvider = ({
+  children,
+}: {
+  children: ReactElement;
+}) => {
   const [state, setState] = useState(initialState);
 
   return (
-    <HomeContext.Provider value={{ state, setState }}>
+    <CalculatorContext.Provider value={{ state, setState }}>
       {children}
-    </HomeContext.Provider>
+    </CalculatorContext.Provider>
   );
 };

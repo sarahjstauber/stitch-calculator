@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.form`
-  margin: 0 auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
   max-width: 730px;
   padding: 0 30px 5rem;
   @media (min-width: 768px) {
+    margin: 0 auto;
     padding: 0 0 7rem;
   }
   @media (max-width: 360px) {
@@ -21,6 +25,7 @@ export const Title = styled.h2`
   }
 `;
 export const InputsContainer = styled.div`
+  gap: 70px;
   @media (min-width: 1024px) {
     display: flex;
     justify-content: space-between;

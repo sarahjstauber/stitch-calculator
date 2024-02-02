@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
-import { HomeContext, initialState } from "./HomeProvider.tsx";
+import { CalculatorContext, initialState } from "./CalculatorProvider.tsx";
 import type { CHANGE_TYPES } from "../../../utils/types.ts";
 import { generatePattern } from "../../../utils/generatePattern.ts";
+import { scrollToElement } from "../../../utils/scrollToElement.ts";
 
 const getChangeType = (
   rowOneCount: number,
@@ -12,8 +13,9 @@ const getChangeType = (
   if (rowOneCount < rowTwoCount) return "inc";
   return "na";
 };
-export function useHomeProvider() {
-  const { state, setState } = useContext(HomeContext);
+
+export function useCalculatorProvider() {
+  const { state, setState } = useContext(CalculatorContext);
   const [isCalculating, setIsCalculating] = useState(false);
 
   useEffect(() => {
@@ -31,6 +33,10 @@ export function useHomeProvider() {
       });
     }
   }, [state.inputs.rowOneCount, state.inputs.rowTwoCount]);
+
+  useEffect(() => {
+    if (state.output.pattern) scrollToElement("footer");
+  }, [state.output.pattern]);
 
   const onCalculate = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -58,7 +64,7 @@ export function useHomeProvider() {
         output: { pattern: "Please fill in all stitch counts" },
       });
     }
-    console.log({ state });
+    setIsCalculating(false);
   };
 
   const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {

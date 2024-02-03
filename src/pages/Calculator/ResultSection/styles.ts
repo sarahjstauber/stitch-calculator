@@ -27,7 +27,28 @@ export const Info = styled.div`
   height: 14px;
   justify-content: center;
   margin-bottom: 1px;
+  position: relative;
   width: 14px;
+  &:after {
+    content: attr(data-tooltip);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    position: absolute;
+    color: white;
+    background-color: #2f1d62d9;
+    padding: 1.25rem 1.5rem;
+    width: max-content;
+    min-width: 250px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 30px 30px 0 30px;
+    transform: translate3d(-53%, -60%, 0);
+    transition: all 0.3s ease-in-out;
+    white-space: pre-wrap;
+  }
+  &:hover:after {
+    opacity: 100;
+  }
 `;
 export const Result = styled.h4`
   color: ${colors["federal-blue"]};

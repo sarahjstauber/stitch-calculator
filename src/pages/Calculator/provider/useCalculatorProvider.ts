@@ -53,7 +53,6 @@ export function useCalculatorProvider() {
         rowTwoCount: state.inputs.rowTwoCount,
         stitchType: state.inputs.rowTwoType ?? "st",
       });
-      console.log(output);
       setState({
         ...state,
         output,
@@ -90,7 +89,6 @@ export function useCalculatorProvider() {
   };
 
   const onReset = () => {
-    console.log("onReset", { isCalculating });
     if (!isCalculating)
       setState({
         ...initialState,

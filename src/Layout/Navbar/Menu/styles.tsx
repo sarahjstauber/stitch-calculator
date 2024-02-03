@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../../ui/colors.ts";
 
-export const HamburgerBar = styled.div<{ $isMenuOpen: boolean }>`
+export const HamburgerBar = styled.div`
   background-color: ${colors["federal-blue"]};
   border-radius: 3px;
   height: 4px;
@@ -10,26 +10,6 @@ export const HamburgerBar = styled.div<{ $isMenuOpen: boolean }>`
     300ms ease-in-out,
     background-color 1000ms ease-in-out;
   width: 28px;
-
-  ${(props) =>
-    props.$isMenuOpen && {
-      backgroundColor: colors["ghost-white"],
-
-      "&:nth-of-type(1)": {
-        rotate: "45deg",
-        translate: "0 -2px",
-        width: `calc(22px * 1.41421356237)`,
-      },
-      "&:nth-of-type(2)": {
-        opacity: 0,
-        width: 0,
-      },
-      "&:nth-of-type(3)": {
-        rotate: "-45deg",
-        translate: "0 2px",
-        width: `calc(22px * 1.41421356237)`,
-      },
-    }}
 `;
 
 export const HamburgerContainer = styled.div<{ $isMenuOpen: boolean }>`
@@ -54,6 +34,23 @@ export const HamburgerContainer = styled.div<{ $isMenuOpen: boolean }>`
         backgroundColor: "white",
         boxShadow: "0 0 12px 1px white",
       },
+
+      ".hamburger_bar": { backgroundColor: colors["ghost-white"] },
+
+      ".hamburger_bar:nth-of-type(1)": {
+        rotate: "45deg",
+        translate: "0 -2px",
+        width: `calc(22px * 1.41421356237)`,
+      },
+      ".hamburger_bar:nth-of-type(2)": {
+        opacity: 0,
+        width: 0,
+      },
+      ".hamburger_bar:nth-of-type(3)": {
+        rotate: "-45deg",
+        translate: "0 2px",
+        width: `calc(22px * 1.41421356237)`,
+      },
     }}
 `;
 
@@ -67,9 +64,9 @@ export const MenuContainer = styled.div<{ $isOpen: boolean }>`
   padding: 30vh 0;
   position: absolute;
   top: 0;
-    //transition: opacity 500ms ease-in-out 200ms;
-    //-moz-transition: opacity 500ms ease-in-out 200ms;
-    transition-delay: 500ms;
+  //transition: opacity 500ms ease-in-out 200ms;
+  //-moz-transition: opacity 500ms ease-in-out 200ms;
+  transition-delay: 500ms;
   visibility: hidden;
   width: 100vw;
 
@@ -80,7 +77,7 @@ export const MenuContainer = styled.div<{ $isOpen: boolean }>`
     }}
 `;
 
-export const MenuItem = styled.h2`
+export const MenuItem = styled.h2<{ $isCurrentPage: boolean }>`
   color: white;
   cursor: pointer;
   font-size: 2.5rem;
@@ -92,6 +89,12 @@ export const MenuItem = styled.h2`
   &:hover {
     text-shadow: 0 0 20px white;
   }
+
+  ${(props) =>
+    props.$isCurrentPage && {
+      textDecoration: "underline 3px",
+      textUnderlineOffset: "0.5rem",
+    }}
 `;
 
 export const MenuAnimation = styled.div<{ $isOpen: boolean }>`

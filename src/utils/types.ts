@@ -17,7 +17,7 @@ export const STITCHES = {
   tfs: { plural: "tunisian full stitches", singular: "tunisian full stitch" },
   tps: { plural: "tunisian purl stitches", singular: "tunisian purl stitch" },
   slst: { plural: "slip stitches", singular: "slip stitch" },
-  rib: { plural: "ribbing rows", singular: "ribbing row" },
+  rib: { plural: "rows", singular: "row" },
   k: { plural: "knits", singular: "knit" },
   p: { plural: "purls", singular: "purl" },
 } as const;

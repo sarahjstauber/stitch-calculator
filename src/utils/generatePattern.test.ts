@@ -21,7 +21,7 @@ describe("generatePattern", () => {
       stitchType: "rib",
     });
     expect(output.pattern).toBe("22dec (22)");
-    expect(output.details).toBe("decrease 22 ribbing rows");
+    expect(output.details).toBe("decrease 22 rows");
   });
 
   it("should handle singular stitch", () => {

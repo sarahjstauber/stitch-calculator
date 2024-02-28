@@ -15,8 +15,8 @@ export const IntroSection = () => {
         <br /> increases & decreases
       </IntroTitle>
       <IntroBody>
-        use the tools below to evenly <b>increase</b> or <b>decrease</b> across
-        ribbing or any two rows of work
+        evenly <i>increase</i> or <i>decrease</i> across ribbing or any two rows
+        of knit or crochet work
       </IntroBody>
       <Button fullWidth onClick={onClick} variant="big">
         calculate

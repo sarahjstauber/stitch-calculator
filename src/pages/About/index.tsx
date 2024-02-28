@@ -8,9 +8,10 @@ export const About = () => {
         <Title>about</Title>
         <Body>
           Welcome! This calculator is designed to help you figure how to evenly
-          increase or decrease between any two rows. The inspiration for this
-          tool came about one evening while one crocheter struggled to properly
-          calculate the transition between ribbing Tunisian crochet. Enjoy!
+          increase or decrease between any two rows of work. The inspiration for
+          this tool came about one evening while Sarah struggled to properly
+          calculate the transition between crochet ribbing and Tunisian crochet
+          simple stitches. Enjoy!
         </Body>
       </InnerContainer>
       <Footer textColor={"dark"} />

@@ -63,6 +63,7 @@ export const Description = styled.p`
   font-size: 1rem;
   line-height: 1.5rem;
   margin: 0 0.625rem 3rem;
+  white-space: pre-wrap;
   @media (min-width: 768px) {
     margin: 0 3.5rem 3.75rem;
   }

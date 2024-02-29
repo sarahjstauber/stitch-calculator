@@ -19,7 +19,6 @@ export const Container = styled.nav`
 const isDifferentPageStyles = css({
   "&:hover": {
     color: colors["tropical-indigo"],
-    textShadow: `${colors["tropical-indigo"]} 0 0 30px`,
   },
 });
 export const Title = styled(Link)<{ $isCurrentPage: boolean }>`

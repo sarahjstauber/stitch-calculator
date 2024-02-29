@@ -1,9 +1,9 @@
-import { InputHTMLAttributes } from "react";
+import type { InputHTMLAttributes } from "react";
 import styled from "styled-components";
 import { colors } from "../colors.ts";
 
 const InputContainer = styled.input`
-  border: none;
+  border: 1px solid ${colors["tropical-indigo"]};
   border-radius: 999px;
   font-size: 1rem;
   padding: 0.25rem 0.5rem 0.25rem 1rem;
@@ -16,7 +16,7 @@ const InputContainer = styled.input`
   }
 `;
 
-type InputProps = {} & InputHTMLAttributes<HTMLInputElement>;
+type InputProps = InputHTMLAttributes<HTMLInputElement>;
 export const Input = ({ ...restProps }: InputProps) => {
   return (
     <InputContainer

@@ -5,6 +5,7 @@ import { colors } from "../colors.ts";
 const Select = styled.select`
   appearance: none;
   -webkit-appearance: none;
+  background-color: ${colors["ghost-white"]};
   border: none;
   border-radius: 999px;
   color: ${colors["federal-blue"]};

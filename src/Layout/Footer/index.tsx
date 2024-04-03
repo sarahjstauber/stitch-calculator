@@ -9,7 +9,9 @@ export const Footer = ({ textColor = "dark" }: FooterProps) => {
       <Copyright
         className={textColor === "light" ? "text-white" : "text-dim-grey"}
       >
-        © 2024 Sarah J. Stauber
+        Copyright © 2024 | All Rights Reserved
+        <br />
+        Designed & Developed by Sarah J. Stauber
       </Copyright>
     </Container>
   );
